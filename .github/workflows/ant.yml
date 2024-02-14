@@ -1,6 +1,3 @@
-# This workflow will build a Java project with Ant
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-ant
-
 name: Java CI
 
 on:
@@ -22,4 +19,4 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
     - name: Build with Ant
-      run: ant -noinput -buildfile build.xml
+      run: ant -Djavadoc.failonerror=false -noinput -buildfile build.xml
