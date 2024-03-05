@@ -89,6 +89,7 @@ public class Trainreservation{
     	Trains.add(newtrain);
     }
     public void addtickets() {
+	    ticket=new ArrayList<>();
         for (User uid : users) {
             uid.renewticket();
             List<Ticket> userTickets = uid.getticket();
